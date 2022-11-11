@@ -1,3 +1,4 @@
+import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 import 'package:flutter/material.dart';
 
 import 'components/play_button.dart';
@@ -75,7 +76,6 @@ class _HomePageState extends State<HomePage>
             height: 70,
             width: 70,
             child: Container(
-              padding: const EdgeInsets.only(bottom: 10.0),
               child: GestureDetector(
                 onTap: _iconTapped,
                 child: PlayButton(animationController: _animationController),
@@ -84,6 +84,24 @@ class _HomePageState extends State<HomePage>
           ),
         ],
       ),
+      bottomNavigationBar: CurvedNavigationBar(
+          backgroundColor: Colors.white,
+          color: const Color.fromARGB(255, 59, 108, 210),
+          animationDuration: const Duration(milliseconds: 400),
+          items: const [
+            Icon(
+              Icons.home,
+              color: Colors.white,
+            ),
+            Icon(
+              Icons.newspaper,
+              color: Colors.white,
+            ),
+            Icon(
+              Icons.settings,
+              color: Colors.white,
+            ),
+          ]),
     );
   }
 }
