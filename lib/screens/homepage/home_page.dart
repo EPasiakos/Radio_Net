@@ -14,15 +14,21 @@ class _HomePageState extends State<HomePage>
   late AnimationController _animationController;
 
   @override
+
+  // Animation controller initialisation.
   void initState() {
     super.initState();
 
     _animationController = AnimationController(
-        vsync: this, duration: const Duration(milliseconds: 500));
+      vsync: this,
+      duration: const Duration(milliseconds: 500),
+    );
   }
 
   bool animationPlaying = false;
   bool audioPlaying = false;
+
+  // Function to handle play button tap.
   void _iconTapped() {
     if (audioPlaying == false) {
       _animationController.forward();
@@ -36,38 +42,44 @@ class _HomePageState extends State<HomePage>
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Column(
-        children: [
-          Expanded(
-            flex: 5,
+      body: Stack(
+        alignment: Alignment.center,
+        children: <Widget>[
+          //Main Backround
+          Container(
+            color: Colors.white,
+          ),
+          //Logo
+          Positioned(
+            top: 70,
+            height: 70,
+            child: Image.asset("assets/images/logo.png"),
+          ),
+          //Play button background
+          //Todo: animation...
+          Positioned(
+            bottom: 10,
+            height: 70,
+            width: 70,
             child: Container(
-              color: Colors.red,
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(100),
+                color: const Color.fromARGB(255, 59, 108, 210),
+              ),
             ),
           ),
-          Stack(children: [
-            GestureDetector(
-            onTap: () {
-              setState(() {
-                animationPlaying = !animationPlaying;
-              });
-            },
-            child: Center(
-              child: AnimatedContainer(
-                width: animationPlaying ? 120 : 100,
-                height: animationPlaying ? 120 : 100,
-                color: Colors.green,
-                duration: const Duration(milliseconds: 600),
+          //Play button.
+          //Todo: link media source for player.
+          Positioned(
+            bottom: 10,
+            height: 70,
+            width: 70,
+            child: Container(
+              padding: const EdgeInsets.only(bottom: 10.0),
+              child: GestureDetector(
+                onTap: _iconTapped,
+                child: PlayButton(animationController: _animationController),
               ),
-            ),  
-          ),
-                child: SizedBox(
-                  height: 100,
-                  width: 100,
-                  child: Center(
-                    child: ,
-                  ),
-                ),
-              ),]
             ),
           ),
         ],
