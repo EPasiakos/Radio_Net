@@ -13,6 +13,7 @@ class PlayButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return AnimatedIcon(
       icon: AnimatedIcons.play_pause,
+      color: Colors.white,
       progress: _animationController,
       size: 70,
     );
