@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../homepage/components/play_button.dart';
+import 'components/play_button.dart';
 
 class RadioPage extends StatefulWidget {
   const RadioPage({super.key});
