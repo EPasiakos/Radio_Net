@@ -26,7 +26,7 @@ class _HomePageState extends State<HomePage> {
       color: Colors.white,
     ),
     Icon(
-      Icons.settings,
+      Icons.verified_user_sharp,
       size: 30,
       color: Colors.white,
     ),

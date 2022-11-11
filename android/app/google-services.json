@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "518292466001",
+    "project_id": "radionet-91340",
+    "storage_bucket": "radionet-91340.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:518292466001:android:5135788d80b9bd302f4b70",
+        "android_client_info": {
+          "package_name": "com.example.radio_net"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "518292466001-nvvkjokcegrol0j1l17pt5emh5iqb2f2.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB0QXfn7YuUhxEhs1JgExcCzzEZ22os5rw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "518292466001-nvvkjokcegrol0j1l17pt5emh5iqb2f2.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
