@@ -21,6 +21,7 @@ class _HomePageState extends State<HomePage>
         vsync: this, duration: const Duration(milliseconds: 500));
   }
 
+  bool animationPlaying = false;
   bool audioPlaying = false;
   void _iconTapped() {
     if (audioPlaying == false) {
@@ -38,13 +39,36 @@ class _HomePageState extends State<HomePage>
       body: Column(
         children: [
           Expanded(
+            flex: 5,
             child: Container(
               color: Colors.red,
             ),
           ),
-          GestureDetector(
-            onTap: _iconTapped,
-            child: PlayButton(animationController: _animationController),
+          Stack(children: [
+            GestureDetector(
+            onTap: () {
+              setState(() {
+                animationPlaying = !animationPlaying;
+              });
+            },
+            child: Center(
+              child: AnimatedContainer(
+                width: animationPlaying ? 120 : 100,
+                height: animationPlaying ? 120 : 100,
+                color: Colors.green,
+                duration: const Duration(milliseconds: 600),
+              ),
+            ),  
+          ),
+                child: SizedBox(
+                  height: 100,
+                  width: 100,
+                  child: Center(
+                    child: ,
+                  ),
+                ),
+              ),]
+            ),
           ),
         ],
       ),
