@@ -1,3 +1,4 @@
+import 'package:audioplayers/audioplayers.dart';
 import 'package:flutter/material.dart';
 
 import 'components/play_button.dart';
@@ -12,13 +13,23 @@ class RadioPage extends StatefulWidget {
 class _RadioPageState extends State<RadioPage>
     with SingleTickerProviderStateMixin {
   late AnimationController _animationController;
-  bool animationPlaying = false;
-  bool audioPlaying = false;
+  //Audio player variables
+  final player = AudioPlayer();
 
-  // Animation controller initialisation.
+  // bool animationPlaying = false;
+  bool _audioPlaying = false;
+
+  // Animation controller initialisation and audio controller.
   @override
   void initState() {
     super.initState();
+
+    //Listen for audio changes
+    player.onPlayerStateChanged.listen((state) {
+      setState(() {
+        _audioPlaying = state == PlayerState.playing;
+      });
+    });
 
     _animationController = AnimationController(
       vsync: this,
@@ -27,13 +38,16 @@ class _RadioPageState extends State<RadioPage>
   }
 
 // Function to handle play button tap.
-  void _iconTapped() {
-    if (audioPlaying == false) {
+  Future<void> _iconTapped() async {
+    if (_audioPlaying == false) {
       _animationController.forward();
-      audioPlaying = true;
+      _audioPlaying = true;
+      String url = "https://sp.19clouds.net/8004/stream";
+      await player.play(UrlSource(url));
     } else {
       _animationController.reverse();
-      audioPlaying = false;
+      _audioPlaying = false;
+      await player.pause();
     }
   }
 
