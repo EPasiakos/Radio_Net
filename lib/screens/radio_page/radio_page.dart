@@ -73,9 +73,10 @@ class _RadioPageState extends State<RadioPage>
             height: 70,
             child: Image.asset("assets/images/logo.png"),
           ),
-          //Play button background
-          //Todo: animation...
+          //Positioned(card of show in the center)
           Positioned(
+            //Play button background
+            //Todo: animation...
             bottom: 10,
             height: 70,
             width: 70,
