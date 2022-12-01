@@ -59,7 +59,13 @@ class _RadioPageState extends State<RadioPage>
         children: <Widget>[
           //Main Backround
           Container(
-            color: Colors.white,
+            height: double.infinity,
+            decoration: const BoxDecoration(
+              image: DecorationImage(
+                image: AssetImage("assets/images/soundboard.jpg"),
+                fit: BoxFit.cover,
+              ),
+            ),
           ),
           //Logo
           Positioned(
@@ -76,7 +82,7 @@ class _RadioPageState extends State<RadioPage>
             child: Container(
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(100),
-                color: const Color.fromARGB(255, 59, 108, 210),
+                color: const Color.fromARGB(255, 59, 108, 210).withOpacity(0.5),
               ),
             ),
           ),

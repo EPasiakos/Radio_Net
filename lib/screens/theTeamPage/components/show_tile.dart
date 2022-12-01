@@ -12,17 +12,21 @@ class _ShowTileState extends State<ShowTile> {
   Widget build(BuildContext context) {
     return Card(
       child: Container(
-        height: 200,
+        height: 400,
         // ignore: prefer_const_constructors
         decoration: BoxDecoration(
-          //borderRadius: BorderRadius.circular(15),
+          color: Colors.white,
+          borderRadius: BorderRadius.circular(15),
           image: const DecorationImage(
               image: AssetImage("assets/images/logo.png"),
               fit: BoxFit.fitWidth,
               alignment: Alignment.topLeft),
         ),
-        child: Text("Test show"),
         alignment: Alignment.bottomLeft,
+        child: const Padding(
+          padding: EdgeInsets.all(12.0),
+          child: Text("Test show"),
+        ),
       ),
     );
   }

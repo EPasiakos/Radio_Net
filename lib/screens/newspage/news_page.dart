@@ -11,11 +11,14 @@ class _NewsPageState extends State<NewsPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        body: ListView.builder(
-      itemCount: 10,
-      itemBuilder: (context, index) {
-        return const ListTile();
-      },
-    ));
+      body: Container(
+        decoration: const BoxDecoration(
+          image: DecorationImage(
+            image: AssetImage("assets/images/soundboard.jpg"),
+            fit: BoxFit.cover,
+          ),
+        ),
+      ),
+    );
   }
 }

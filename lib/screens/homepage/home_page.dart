@@ -38,22 +38,21 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        backgroundColor: Colors.white,
-        bottomNavigationBar: CurvedNavigationBar(
-          backgroundColor: Colors.white,
-          color: const Color.fromARGB(255, 59, 108, 210),
-          items: items,
-          index: index,
-          onTap: (selectedIndex) {
-            setState(() {
-              index = selectedIndex;
-            });
-          },
-        ),
-        body: Container(
-          color: Colors.white,
-          child: getSelectedPage(index: index),
-        ));
+      body: Container(
+        child: getSelectedPage(index: index),
+      ),
+      bottomNavigationBar: CurvedNavigationBar(
+        backgroundColor: const Color.fromARGB(255, 28, 26, 26).withOpacity(1),
+        color: const Color.fromARGB(255, 59, 108, 210),
+        items: items,
+        index: index,
+        onTap: (selectedIndex) {
+          setState(() {
+            index = selectedIndex;
+          });
+        },
+      ),
+    );
   }
 
   getSelectedPage({required int index}) {
