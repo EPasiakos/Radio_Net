@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:audioplayers/audioplayers.dart';
+import 'package:neon/neon.dart';
 import 'package:radio_net/components/bottom_nav.dart';
 import 'package:radio_net/components/play_button.dart';
 import 'package:radio_net/components/show_card.dart';
@@ -74,13 +75,28 @@ class _HomePageState extends State<HomePage>
             height: 70,
             child: Image.asset("assets/images/logo.png"),
           ),
-          //Positioned(card of show in the center)
+          //card of show in the center
           const FrostedCard(
             title: 'My Card',
             description:
                 'This is a frosted card with a picture, title, and description',
             imageUrl:
                 'https://radio-net.gr/wp-content/uploads/2022/12/%CE%9A%CE%B5%CF%86%CE%B1%CE%BB%CE%AC%CF%82-%CE%97%CE%BB%CE%AF%CE%B1%CF%82-750x375-1.jpg',
+          ),
+          //Neon banner
+          Positioned(
+            top: 240,
+            right: 20,
+            height: 70,
+            child: Neon(
+              text: "On Air",
+              fontSize: 50,
+              color: Colors.red,
+              font: NeonFont.Beon,
+              flickeringText: true,
+              glowingDuration: const Duration(milliseconds: 500),
+              blurRadius: 50,
+            ),
           ),
           Positioned(
             //Play button background
