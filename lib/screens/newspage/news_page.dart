@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:radio_net/components/bottom_nav.dart';
 
 class NewsPage extends StatefulWidget {
   const NewsPage({super.key});
@@ -18,6 +19,9 @@ class _NewsPageState extends State<NewsPage> {
             fit: BoxFit.cover,
           ),
         ),
+      ),
+      bottomNavigationBar: const BottomNav(
+        activeButtonIndex: 1,
       ),
     );
   }

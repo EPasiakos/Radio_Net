@@ -1,7 +1,6 @@
 import 'package:audioplayers/audioplayers.dart';
 import 'package:flutter/material.dart';
-
-import 'components/play_button.dart';
+import 'package:radio_net/components/play_button.dart';
 
 class RadioPage extends StatefulWidget {
   const RadioPage({super.key});

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:radio_net/components/bottom_nav.dart';
 
 import 'components/show_tile.dart';
 
@@ -47,6 +48,9 @@ class _TheTeamPageState extends State<TheTeamPage> {
             ),
           ],
         ),
+      ),
+      bottomNavigationBar: const BottomNav(
+        activeButtonIndex: 2,
       ),
     );
   }
