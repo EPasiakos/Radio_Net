@@ -27,6 +27,7 @@ class MyApp extends StatelessWidget {
         Provider.of<NavigationController>(context);
 
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       home: Navigator(
         pages: [
           const MaterialPage(child: HomePage()),

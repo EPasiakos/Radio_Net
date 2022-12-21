@@ -41,6 +41,9 @@ class BottomNav extends StatelessWidget {
           label: 'About',
         ),
       ],
+      backgroundColor: Colors.black87,
+      selectedItemColor: Colors.white,
+      unselectedItemColor: Colors.white.withOpacity(0.5),
     );
   }
 }
