@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:audioplayers/audioplayers.dart';
 import 'package:radio_net/components/bottom_nav.dart';
 import 'package:radio_net/components/play_button.dart';
+import 'package:radio_net/components/show_card.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -74,6 +75,13 @@ class _HomePageState extends State<HomePage>
             child: Image.asset("assets/images/logo.png"),
           ),
           //Positioned(card of show in the center)
+          const FrostedCard(
+            title: 'My Card',
+            description:
+                'This is a frosted card with a picture, title, and description',
+            imageUrl:
+                'https://radio-net.gr/wp-content/uploads/2022/12/%CE%9A%CE%B5%CF%86%CE%B1%CE%BB%CE%AC%CF%82-%CE%97%CE%BB%CE%AF%CE%B1%CF%82-750x375-1.jpg',
+          ),
           Positioned(
             //Play button background
             //Todo: animation...
