@@ -31,9 +31,9 @@ class MyApp extends StatelessWidget {
       home: Navigator(
         pages: [
           const MaterialPage(child: HomePage()),
-          if (navigation.screenName == '/settings')
+          if (navigation.screenName == '/News')
             const MaterialPage(child: NewsPage()),
-          if (navigation.screenName == '/about')
+          if (navigation.screenName == '/Our team')
             const MaterialPage(child: TheTeamPage()),
         ],
         onPopPage: ((route, result) {

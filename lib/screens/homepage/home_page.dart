@@ -78,8 +78,7 @@ class _HomePageState extends State<HomePage>
           //card of show in the center
           const FrostedCard(
             title: 'My Card',
-            description:
-                'This is a frosted card with a picture, title, and description',
+            description: 'Daily news show by Giannis Koutras',
             imageUrl:
                 'https://radio-net.gr/wp-content/uploads/2022/12/%CE%9A%CE%B5%CF%86%CE%B1%CE%BB%CE%AC%CF%82-%CE%97%CE%BB%CE%AF%CE%B1%CF%82-750x375-1.jpg',
           ),

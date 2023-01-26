@@ -20,10 +20,10 @@ class BottomNav extends StatelessWidget {
             navigation.changeScreen('/');
             break;
           case 1:
-            navigation.changeScreen('/settings');
+            navigation.changeScreen('/News');
             break;
           case 2:
-            navigation.changeScreen('/about');
+            navigation.changeScreen('/Our team');
             break;
         }
       },
@@ -34,11 +34,11 @@ class BottomNav extends StatelessWidget {
         ),
         BottomNavigationBarItem(
           icon: Icon(Icons.settings),
-          label: 'Settings',
+          label: 'News',
         ),
         BottomNavigationBarItem(
           icon: Icon(Icons.person),
-          label: 'About',
+          label: 'Our team',
         ),
       ],
       backgroundColor: Colors.black87,
